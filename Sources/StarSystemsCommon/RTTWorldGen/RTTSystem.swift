@@ -24,11 +24,11 @@ private func > <T: Comparable>(lhs: T?, rhs: T?) -> Bool {
   }
 }
 
-class RTTSystem: CustomStringConvertible {
+public class RTTSystem: CustomStringConvertible {
     var stars: [RTTStar] = []
     var age: Int // system age in billions of years
     var present = Set<StarOrbits>()
-    var description: String {
+    public var description: String {
         var result: String = ""
         result += "System is \(age) billion years old, there \(stars.count.strord("star")):\n"
         for star in stars {

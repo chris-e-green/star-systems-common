@@ -102,7 +102,7 @@ enum TradeClass: String, CustomStringConvertible {
     // swiftlint:enable identifier_name
 }
 
-class Planet: Satellite, CustomStringConvertible {
+public class Planet: Satellite, CustomStringConvertible {
     // MARK: System-centric Variables
     var coordinateX: Int=0
     var coordinateY: Int=0
@@ -171,7 +171,7 @@ class Planet: Satellite, CustomStringConvertible {
         return result
     }
 
-    var description: String {
+    public var description: String {
         var result = ""
         result += name.padding(maxNameLength)
         if coordinateX != 0 && coordinateY != 0 {

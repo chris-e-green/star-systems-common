@@ -11,12 +11,12 @@
 
 import Foundation
 
-class Subsector: CustomStringConvertible {
+public class Subsector: CustomStringConvertible {
     var planets = [Planet]()
     var starSystems = [StarSystem]()
     var name: String = ""
 
-    var description: String {
+    public var description: String {
         var result: String = ""
         result += "Subsector name: \(name)\n"
 

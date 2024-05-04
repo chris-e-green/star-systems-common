@@ -47,7 +47,7 @@ enum JsonLabels: String, CustomStringConvertible {
     }
 }
 
-class JsonFile {
+public class JsonFile {
     var jsonFilename: String?
 
     func writeJson(_ jsonData: String) {

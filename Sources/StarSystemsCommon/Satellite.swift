@@ -75,7 +75,7 @@ class Satellites {
 /**
  Represents a generic satellite (companion star, planet, moon).
  */
-class Satellite {
+public class Satellite {
     /// The satellites orbiting this satellite.
     var satellites = Satellites()
     /// The parent satellite of this satellite. Everything except the primary

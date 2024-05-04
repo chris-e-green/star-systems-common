@@ -24,7 +24,7 @@ enum SystemNature: Int, CustomStringConvertible {
     }
 }
 
-class StarSystem: CustomStringConvertible {
+public class StarSystem: CustomStringConvertible {
     var basicNature: SystemNature
     var subsectorName: String = ""
     var primary: Star   = Star()  // the primary star. Companions are satellites.
@@ -647,7 +647,7 @@ class StarSystem: CustomStringConvertible {
         }
     }
     
-    var description: String {
+    public var description: String {
         var result: String = ""
         if let mainWorldPlanet = mainWorld { result += "\(mainWorldPlanet)\n\(mainWorldPlanet.name) " } else { result += "This " }
         result += "is a \(basicNature) Star System"
