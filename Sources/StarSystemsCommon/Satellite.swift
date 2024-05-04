@@ -82,7 +82,7 @@ public class Satellite {
     /// will have a parent.
     var parent: Satellite?
     /// The name of this satellite.
-    var name: String
+    public var name: String
     /// The maximum name length for a satellite.
     let maxNameLength = 15 // this lets names fit on the map!
 

@@ -73,7 +73,7 @@ public class Subsector: CustomStringConvertible {
         return jsonText
     }
     
-    func generatePdf(_ filename: String, starSysPrint: Bool = false) {
+    public func generatePdf(_ filename: String, starSysPrint: Bool = false) {
         let pdf: Pdf = Pdf()
         pdf.start()
         if starSysPrint {
@@ -95,7 +95,7 @@ public class Subsector: CustomStringConvertible {
         }
     }
     
-    func populateStarSystems() {
+    public func populateStarSystems() {
         for planet in planets {
             let starSystem = StarSystem(newWorld: planet)
             starSystem.subsectorName = name
@@ -103,7 +103,7 @@ public class Subsector: CustomStringConvertible {
         }
     }
     
-    func serialize(_ filename: String) {
+    public func serialize(_ filename: String) {
         do {
             let expandedFilename = NSString(string: filename).expandingTildeInPath
             print("Writing XML to \(expandedFilename)")
@@ -113,7 +113,7 @@ public class Subsector: CustomStringConvertible {
         }
     }
     
-    func writeJson(_ filename: String) {
+    public func writeJson(_ filename: String) {
         do {
             let expandedFilename = NSString(string: filename).expandingTildeInPath
             print("Writing JSON to \(expandedFilename)")
@@ -123,7 +123,7 @@ public class Subsector: CustomStringConvertible {
         }
         
     }
-    func writeJson2(_ filename: String) {
+    public func writeJson2(_ filename: String) {
         do {
             let expandedFilename = NSString(string: filename).expandingTildeInPath
             print("Writing JSON to \(expandedFilename)")
@@ -133,12 +133,12 @@ public class Subsector: CustomStringConvertible {
         }
         
     }
-    init(xml: String) {
+    public init(xml: String) {
         let parser = XMLParser(stream: InputStream(fileAtPath: xml)!)
         parser.parse()
     }
     
-    init(jsonFilename: String) {
+    public init(jsonFilename: String) {
         do {
             let jsonStream = InputStream(fileAtPath: jsonFilename)
             jsonStream?.open()
@@ -155,7 +155,7 @@ public class Subsector: CustomStringConvertible {
         }
     }
 
-    init(density: Int, withStarSystems: Bool = false) {
+    public init(density: Int, withStarSystems: Bool = false) {
         let die: Dice = Dice(sides: 6)
 
         for xCoord in 1...8 {

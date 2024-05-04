@@ -62,7 +62,7 @@ public class JsonFile {
         }
     }
 
-    init(jsonFilename: String) {
+    public init(jsonFilename: String) {
         self.jsonFilename = jsonFilename
     }
 

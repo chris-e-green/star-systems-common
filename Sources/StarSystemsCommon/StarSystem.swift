@@ -171,7 +171,7 @@ public class StarSystem: CustomStringConvertible {
 
     let die: Dice = Dice()
 
-    init(newWorld: Planet? = nil, verbose: Bool = false) {
+    public init(newWorld: Planet? = nil, verbose: Bool = false) {
         self.verbose = verbose
         var dmRequired = false
         var mainWorldNeedsHabitable = true

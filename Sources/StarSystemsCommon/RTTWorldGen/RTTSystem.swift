@@ -47,7 +47,7 @@ public class RTTSystem: CustomStringConvertible {
         return result
     }
 
-    init() {
+    public init() {
         age = Dice.roll(3) - 3  // this is more useful to know in advance.
         if Dice.roll(1, sides: 2) == 2 {
             // brown dwarf somewhere

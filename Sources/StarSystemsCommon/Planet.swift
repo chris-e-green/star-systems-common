@@ -104,8 +104,8 @@ enum TradeClass: String, CustomStringConvertible {
 
 public class Planet: Satellite, CustomStringConvertible {
     // MARK: System-centric Variables
-    var coordinateX: Int=0
-    var coordinateY: Int=0
+    public var coordinateX: Int=0
+    public var coordinateY: Int=0
     var gasGiant: Bool = false
     var planetoids: Bool = false
 
@@ -566,7 +566,7 @@ public class Planet: Satellite, CustomStringConvertible {
         setTradeClassifications()
     }
 
-    convenience init(upp: String, scoutBase: Bool, navalBase: Bool, gasGiant: Bool) {
+    public convenience init(upp: String, scoutBase: Bool, navalBase: Bool, gasGiant: Bool) {
         self.init()
         if scoutBase { bases.insert(.scoutBase) }
         if navalBase { bases.insert(.navalBase) }
