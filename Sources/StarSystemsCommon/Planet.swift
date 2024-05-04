@@ -607,7 +607,7 @@ public class Planet: Satellite, CustomStringConvertible {
     }
 
     // MARK: Functions
-    func generateRandomPlanet(_ planetoid: Bool = false) {
+    public func generateRandomPlanet(_ planetoid: Bool = false) {
         if debugRolls { rollHistory["from_scratch"] = 1 }
         let nameGen: Name = Name(maxLength: maxNameLength)
         var roll = 0
