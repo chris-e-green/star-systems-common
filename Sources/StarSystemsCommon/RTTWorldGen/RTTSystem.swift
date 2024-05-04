@@ -37,7 +37,7 @@ public class RTTSystem: CustomStringConvertible {
         result += "Orbits present: \(present)\n"
         return result
     }
-    var verboseDesc: String {
+    public var verboseDesc: String {
         var result: String = ""
         result += "System is \(age) billion years old, there \(stars.count.strord("star")):\n"
         for star in stars {

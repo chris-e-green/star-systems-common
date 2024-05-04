@@ -50,7 +50,7 @@ enum JsonLabels: String, CustomStringConvertible {
 public class JsonFile {
     var jsonFilename: String?
 
-    func writeJson(_ jsonData: String) {
+    public func writeJson(_ jsonData: String) {
         if let filename = jsonFilename {
             do {
                 let expandedFilename = NSString(string: filename).expandingTildeInPath

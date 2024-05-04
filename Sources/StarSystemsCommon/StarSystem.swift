@@ -678,7 +678,7 @@ public class StarSystem: CustomStringConvertible {
         return result
     }
     
-    var json: String {
+    public var json: String {
         var result: String = "{\n"
         result += primary.json
         result += "}\n"

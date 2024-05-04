@@ -137,7 +137,7 @@ public class Satellite {
         return result
     }
     /// Initializer with optional parent satellite.
-    init(parent: Satellite? = nil) {
+    public init(parent: Satellite? = nil) {
         self.parent = parent
         name = ""
     }
